@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   # view > articles > test.html.erb
   # を参照している
   get "/articles", to: "articles#index"
+  get "/articles/:id", to: "articles#show"
 end

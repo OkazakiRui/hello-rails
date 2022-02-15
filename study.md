@@ -47,6 +47,15 @@ Article.find(1)
 Article.all
 ```
 
+## controller
+
+### パラメーターの値を取得
+
+```
+params[:id]
+@article = Article.find(params[:id])
+```
+
 ## view
 
 `<% %>`の中で処理を書くことができる。
