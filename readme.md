@@ -1,42 +1,24 @@
-## rails new
+# README
 
-```
-docker-compose run web rails new . --force --database=mysql --skip-bundle
-```
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## docker-compose build
+Things you may want to cover:
 
-```
-docker-compose build
-```
+* Ruby version
 
-## config/database.yml
+* System dependencies
 
-```
-password: pass
-host: db
-```
+* Configuration
 
-## コンテナを起動
+* Database creation
 
-```
-docker-compose up -d
-```
+* Database initialization
 
-## データベースを作成
+* How to run the test suite
 
-```
-docker-compose exec web rails db:create
-```
+* Services (job queues, cache servers, search engines, etc.)
 
-## rails コマンド
+* Deployment instructions
 
-```
-docker-compose exec web bash
-```
-
-## コンテナの停止
-
-```
-docker-compose down
-```
+* ...
