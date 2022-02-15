@@ -6,5 +6,15 @@
         <%= article.title %>
       </a>
     </li>
+    <li>
+      <%# apiResouce でルーティングすると、model のデータを遡れる %>
+      <a href="<%= article_path(article) %>">
+        <%= article.title %>
+      </a>
+    </li>
+    <li>
+      <%# link_to テキスト群, model単一データ でaタグが返される %>
+      <%= link_to article.title, article %>
+    </li>
   <% end %>
 </ul>

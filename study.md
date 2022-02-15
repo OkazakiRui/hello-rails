@@ -81,6 +81,36 @@ Article.all
 <% end %>
 ```
 
+### link の作成方法 3 種
+
+通常のルーティング方法
+
+```
+<li>
+  <a href="/articles/<%= article.id %>">
+    <%= article.title %>
+  </a>
+</li>
+```
+
+apiResouce でルーティングすると、model のデータを遡れる
+
+```
+<li>
+  <a href="<%= article_path(article) %>">
+    <%= article.title %>
+  </a>
+</li>
+```
+
+link_to テキスト群, model 単一データ で a タグが返される
+
+```
+<li>
+  <%= link_to article.title, article %>
+</li>
+```
+
 ## routes
 
 ### ルーティングの方法
