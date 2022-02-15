@@ -49,10 +49,17 @@ Article.all
 
 ## controller
 
-### パラメーターの値を取得
+### インスタンス変数を作成
 
 ```
-params[:id]
+@articles = Article.all
+```
+
+### パラメーターの値を取得
+
+`params[:id]`で取得できる
+
+```
 @article = Article.find(params[:id])
 ```
 
