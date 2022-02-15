@@ -63,6 +63,46 @@ Article.all
 @article = Article.find(params[:id])
 ```
 
+### レコードを追加する方法
+
+new でインスタンスを作成し、save で保存する
+
+```
+def new
+  @book = Book.new(title: "羅生門", author:"芥川龍之介")
+  @book.save
+end
+```
+
+create メソッドを使う
+
+```
+def create
+  Book.create(title: "羅生門", author:"芥川龍之介")
+end
+```
+
+### fillable の設定
+
+```
+private
+  def article_params
+    params.require(:article).permit(:カラム名, :カラム名)
+  end
+```
+
+## model
+
+### バリデーションの設定
+
+presence は null を許容しない
+[Document](https://railsguides.jp/active_record_validations.html)
+
+```
+validates :title, presence: true
+validates :body, presence: true, length: { minimum: 10 }
+```
+
 ## view
 
 `<% %>`の中で処理を書くことができる。
