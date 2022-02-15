@@ -46,3 +46,21 @@ Article.find(1)
 ```
 Article.all
 ```
+
+## view
+
+`<% %>`の中で処理を書くことができる。
+
+### print
+
+`<%= %>` は中で return があったものを print してくれる
+
+### foreach
+
+```
+<% @hoges.each do |hoge| %>
+  <li>
+    <%= hoge.title %>
+  </li>
+<% end %>
+```
