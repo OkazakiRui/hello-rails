@@ -73,3 +73,19 @@ params[:id]
   </li>
 <% end %>
 ```
+
+## routes
+
+### ルーティングの方法
+
+```
+get "/articles", to: "articles#index"
+get "/articles/:id", to: "articles#show"
+```
+
+### apiRresource
+
+```
+root "articles#index"
+resources :articles
+```
